@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.7.0/css/flag-icons.min.css" integrity="sha512-s/Nra58/et4CDKSnhUiPrce+8M5tdK1Ps0+9dKe4I9JH/g0QGzsPAdf1fLeBsMTMG1zWMBsnzxvPgTOAFUHwLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 id="page-heading">WEATHER APP</h1>
+            <!-- tab container in which we switch tab  -->
+            <div class="tab-container">
+                <p class="current-tab">Your Weather</p>
+                <p class="search-weather">Search Weather</p>
+            </div>
+
+            <!-- Grant Location Container  -->
+            <div class="grant-location-container" id="grantLocationCont">
+                <img src="./assets/location.png" height="120px" width="120px">
+                <h2>Grant Location Access</h2>
+                <p>Allow Access To Get Weather Information</p>
+                <button id="grant-access-btn">Grant Access</button>
+            </div>
+
+            <!-- Loading Container  -->
+            <div class="loading-container">
+                <img src="./assets/loading.gif" height="150px" width="150px">
+                <p>loading...</p>
+            </div>
+
+            <!-- Weather Report Container  -->
+            <div class="weather-report-container">
+                <div class="heading-country-icon">
+                    <h2 id="city-name">Raipur</h2>
+                    <img src="" id="country-flag">
+                </div>
+                <p id="weather-type">Clouds</p>
+                <img src="" id="weather-type-image">
+                <h1 id="temprature">31.5 <span>℃</span></h1>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="./assets/wind.png">
+                        <p>WINDSPEED</p>
+                        <p id="wind-speed"> <span>m/s</span></p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/humidity.png">
+                        <p>HUMIDITY</p>
+                        <p id="humidity"> <span>m/s</span></p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/cloud.png">
+                        <p>CLOUDS</p>
+                        <p id="clouds"> <span>m/s</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Box Container  -->
+            <form class="search-box-contaienr">
+                <input type="text" name="search-box" id="search-box" placeholder="Search for City...">
+                <button type="submit" id="search-box-submit-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="city-not-found">
+                <img src="./assets/not-found.png" alt="">
+                <h3>City Not Found...</h3>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
